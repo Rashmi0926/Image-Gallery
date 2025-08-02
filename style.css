@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    background: #e4e3d9;
+    margin: 0;
+  }
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  .filters button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #e3e3e3;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .filters button.active, .filters button:hover {
+    background: #665cec;
+    color: #fff;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 16px 28px;
+  }
+  .item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
+    background: #fff;
+    transition: box-shadow 0.3s;
+  }
+  .item img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(.23,1.08,.6,1.24);
+  }
+  .item:hover img {
+    transform: scale(1.1) rotate(-1deg);
+    filter: brightness(1.08) saturate(1.15);
+  }
+  .item:hover {
+    box-shadow: 0 8px 32px rgba(30,40,70,0.14);
+  }
+  @media (max-width: 700px) {
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    .item img { height: 100px; }
+  }
+  /* Lightbox Styles */
+  .lightbox {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.78);
+    z-index: 1111;
+    flex-direction: column;
+    transition: opacity 0.3s;
+  }
+  .lightbox.hidden { display: none; }
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 82vh;
+    border: 6px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 28px rgba(0,0,0,0.25);
+    animation: scaleIn 0.3s;
+  }
+  @keyframes scaleIn {
+    from { transform: scale(0.8); opacity:0.6;}
+    to   { transform: scale(1);   opacity:1;}
+  }
+  .lightbox .close, .lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 36px;
+    color: #fff;
+    font-size: 2.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 2px 8px #222;
+    z-index: 15;
+    transition: color 0.2s;
+  }
+  .lightbox .close     { right: 38px; top: 38px; }
+  .lightbox .prev      { left: 38px; top: 50%; transform: translateY(-50%);}
+  .lightbox .next      { right: 38px; top: 50%; transform: translateY(-50%);}
+  .lightbox .close:hover,
+  .lightbox .prev:hover,
+  .lightbox .next:hover { color: #c4a2ff; }
+  

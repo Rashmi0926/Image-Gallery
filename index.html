@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Category Filters -->
+  <div class="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="city">City</button>
+    <button data-filter="people">People</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery">
+    <div class="item nature">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600" alt="Nature 1" />
+    </div>
+    <div class="item city">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="City 1" />
+    </div>
+    <div class="item people">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600" alt="People 1" />
+    </div>
+    <div class="item nature">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600" alt="Nature 2" />
+    </div>
+    <div class="item city">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600" alt="City 2" />
+    </div>
+    <div class="item people">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600"  alt="People 2" />
+    </div>
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="" />
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
