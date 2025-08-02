@@ -9,5 +9,5 @@ A sleek and modern web application that displays images in a fully responsive ga
 
 🚀 Tech Stack-
 
-HTML5 + CSS3 (Flexbox/Grid)
+HTML5 + CSS3 
 JavaScript
