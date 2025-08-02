@@ -3,11 +3,15 @@ A sleek and modern web application that displays images in a fully responsive ga
 ✨ Features-
 
 📱 Responsive Design.
+
 🖼️ Dynamic Image Loading .
+
 🔍 Lightbox View – Click images to view in an enlarged overlay.
+
 ⚡ Fast & Lightweight – Minimal dependencies for quick load times.
 
 🚀 Tech Stack-
 
-HTML5 + CSS3 
+HTML5 + CSS3
+
 JavaScript
